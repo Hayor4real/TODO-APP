@@ -7,6 +7,7 @@
     <title>Todo list</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
@@ -18,6 +19,73 @@
         <h2 class="title">
           what's up, <input type="text" id="name" placeholder="Name here" />
         </h2>
+      </section>
+      <section class="create-todo">
+        <h3>CREATE A TODO</h3>
+        <form id="new-todo-form">
+          <h4>What's on your todo list</h4>
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="Make a video"
+          />
+          <h4>Pick a category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>personal</div>
+            </label>
+          </div>
+          <input type="submit" value="Add todo" />
+        </form>
+      </section>
+      <section class="todo-list">
+        <h3>Todo List</h3>
+        <div class="list" id="todo-list">
+          <div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble business"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="Make a video" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+          <div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble personal"></span>
+            </label>
+            <div class="todo-content">
+              <input type="text" value="Get milk" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="edit">Delete</button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script src="index.js"></script>
